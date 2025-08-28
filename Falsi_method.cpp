@@ -31,7 +31,7 @@ db calculateFunction(db x)
     return 4*x*x+3*x-3;
 }
 
-void bisection(db a,db b)
+void Falsi(db a,db b)
 {
     db error=1e5;
     ll step=1;
@@ -61,7 +61,7 @@ void shakil()
 {
     cout<<"Enter Guess value:";
     db a,b; cin>>a>>b;
-    bisection(a,b);
+    Falsi(a,b);
 }
 int  main()
 {
