@@ -50,6 +50,7 @@ void bisection(db a,db b)
         else a=mid;
 
         cout<<"step :"<<step<<" "<<"approximation value: "<<mid<<" Error:"<<error<<nl;
+        step++;
     }
 
     cout<<"Final Result:"<<mid<<nl;
