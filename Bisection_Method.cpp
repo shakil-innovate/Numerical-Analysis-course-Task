@@ -39,7 +39,6 @@ void bisection(db a,db b)
 
 int  main()
 {
-   cout<<func(.75)<<" "<<func(1)<<nl;
    cout<<"Enter guessing two val:"<<nl;
    db a,b;  cin>>a>>b;
    bisection(a,b);
