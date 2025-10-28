@@ -28,20 +28,21 @@ ll nCr(ll n, ll r) {
 }
 //---------------------------------------//
 
-ld dif_eq(ld x){
+ld dif_eq(ld x,ll y){
   return -2*x*x*x+12*x*x-20*x+8.5;      // differential equation
 }
 void shakil(){
+  ld p1=1,q11=1,a1=.5,a2=.5;
   ld h=.5;
   ld x=0,y=1;
   ld lm_x=4;
 
   ll step=1;
   while(x<lm_x){
-    ld y_n=dif_eq(x);
+    ld k1=dif_eq(x,y);
+    ld k2=dif_eq(x+p1*h, y+q11*k1*h);
+    y=y+h*(a1*k1+a2*k2);
     x+=h;
-    ld y_n_plus_1=dif_eq(x);
-    y=y+h/2*(y_n+y_n_plus_1);
   }
   cout<<"value of y at x is: "<<y<<nl;
 }
